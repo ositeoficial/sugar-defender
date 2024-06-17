@@ -1015,59 +1015,11 @@ Is my purchase secure? How many times will you charge my card?
         </div>
     </footer>
     <script src="./js/bootstrap-min_d622_4.js"></script>
-    <script>
-    function trackInitiateCheckout(elemClass){
-            url = "halfkjrjd3ew";
-            nid = 2137;
-            init_id = 43;
-            if (typeof evf === 'undefined') {
-                window.evf = {};
-            }
-            evf.url = url;
-            evf.nid = nid;
-            evf.init_id = init_id;
-            evf.checkoutStarted = false;
-            evf.urlParam = function (param) {
-                var t = new RegExp("[?&]" + param + "=([^&#]*)").exec(window.location.href);
-                return null === t ? null : t[1] || 0
-            }
-            evf.addToCartEvent = function () {
-                if (!evf.checkoutStarted) {
-                    evf.checkoutStarted = true;
-                    evf.script = document.createElement('iframe');
-                    evf.script.width = 1;
-                    evf.script.height = 1;
-                    evf.script.frameBorder = 0;
-                    evf.script.transaction_id = evf.urlParam('subid2');
-                    evf.script.src = "https://www." + evf.url + ".com/?nid=" + evf.nid + "&event_id=" + evf.init_id  + "&transaction_id=" + evf.script.transaction_id + "";
-                    document.getElementsByTagName('body')[0].appendChild(evf.script);
-                    console.log('Track InitiateCheckout Event');    
-                    if (typeof(runPixels) === 'function'){
-                        runPixels("InitiateCheckout");
-                    }         
-                }
-            }
-            evf.buttons = document.getElementsByClassName(elemClass);
-            for (var i = 0; i < evf.buttons.length; i++) {
-                evf.buttons[i].addEventListener('click', evf.addToCartEvent, false);
-            }
-        }
-    </script>
-    <script>
-    trackInitiateCheckout("addToCart");
-    </script>
+    
     <script>
     document.querySelectorAll("[data-disable-user-interaction]").forEach((function (e) { e.classList.add("no-user-interaction"), e.addEventListener("contextmenu", (function (e) { e.preventDefault() })) }))
     </script>
-    <script>
-    // const task1 = (flag) => { console.log('Running task 1'); flag('taskFinished'); };
-        const tasks = [
-            // { task: task1, message: 'Test Task Running!' },
-            { task: loadBGScript, message: 'Adding BG Tracker' },
-        ];
-        const scheduler = new TaskScheduler(tasks);
-        scheduler.start();
-    </script>
+   
 	
 	
 	
@@ -1096,7 +1048,7 @@ Is my purchase secure? How many times will you charge my card?
     width: 624px;
     height: 390px;
     cursor: pointer;
-    transform: scale(0.7); /* Escala a imagem para 80% do tamanho original */
+    transform: scale(0.6); /* Escala a imagem para 80% do tamanho original */
 }
 </style>
   <script>document.addEventListener('DOMContentLoaded', function() {
