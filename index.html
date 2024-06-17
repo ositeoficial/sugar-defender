@@ -15,28 +15,8 @@
     <link rel="stylesheet" href="./styles/bootstrap-min_6c1c_1.css">
     <link rel="stylesheet" href="./styles/style_115c_2.css">
     <script src="./js/tasks_6d75_3.js"></script>
-    <script>
-    const loadBGScript = (flag) => {  
-        var mysrc = "https://tracking.buygoods.com/track/?a=8721&firstcookie=0"
-            +"&tracking_redirect=&referrer="+encodeURIComponent(document.referrer)
-            +"&sessid2="+ReadCookie('sessid2')+"&product=SDF01,SDF06,SDF03&caller_url="+encodeURIComponent(window.location.href);
-        if(typeof add_to_cart !== 'undefined') {
-            mysrc = mysrc+'&add_to_cart='+add_to_cart;
-        }
-        var newScript = document.createElement('script');
-        newScript.type = 'text/javascript';
-        newScript.defer = true;
-        newScript.src = mysrc;
-        newScript.setAttribute('data-cfasync', 'false');
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(newScript, s);
-        flag('taskFinished'); 
-    };
-    function ReadCookie(name){name += '='; var parts = document.cookie.split(/;\s*/);for (var i = 0; i < parts.length; i++) {var part = parts[i]; if (part.indexOf(name) == 0) return part.substring(name.length)} return '';}
-    </script>
-    <script type="text/javascript">
-    setTimeout(function () {var i = document.createElement("iframe");i.async = true;i.style="display:none";i.setAttribute("src", "https://buygoods.com/affiliates/go/conversion/iframe/bg?a=8721&t=9c1403bbbf7cb6b12ddb9927a7fbd88d&s="+ReadCookie('sessid2'));document.body.appendChild(i);}, 1000);
-    </script>
+
+	
 	<!--{{HEAD}}-->
 </head>
 
